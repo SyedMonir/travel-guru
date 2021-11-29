@@ -1,0 +1,14 @@
+.form_bottom{
+    margin: 20px;
+}
+
+.form_bottom span{
+    background:black;
+    height: 1px;
+    line-height: 40px;
+    width: 200px;
+    margin: 5px;
+}
+.form_bottom h6{
+    margin: 5px;
+}
