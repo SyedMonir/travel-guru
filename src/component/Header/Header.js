@@ -30,11 +30,11 @@ const Header = (props) => {
                             />
                         </Form>
                         <Nav className="mx-auto">
-                            <Link to="home" className="px-4 navLink">NEWS</Link>
-                            <Link to="destination" className="px-4 navLink">DESTINATION</Link>
-                            <Link to="blog" className="px-4 navLink">BLOG</Link>
-                            <Link to="contact" className="px-4 navLink">CONTACT</Link>
-                            <Link to="login" className="px-4 navLink" style={{ background: '#F9A51A', borderRadius: '5px', padding: '2px' }}>LOGIN</Link>
+                            <Link to="/home" className="px-4 navLink">NEWS</Link>
+                            <Link to="/destination" className="px-4 navLink">DESTINATION</Link>
+                            <Link to="/blog" className="px-4 navLink">BLOG</Link>
+                            <Link to="/contact" className="px-4 navLink">CONTACT</Link>
+                            <Link to="/login" className="px-4 navLink" style={{ background: '#F9A51A', borderRadius: '5px', padding: '2px' }}>LOGIN</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

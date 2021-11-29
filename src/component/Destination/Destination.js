@@ -6,6 +6,7 @@ import location, { hotelsInfo } from '../../fakeData/location';
 import Header from '../Header/Header';
 import blackLogo from '../../img/Logo-black.png';
 import Hotels from '../Hotels/Hotels';
+import Map from '../Map/Map';
 
 
 const Destination = () => {
@@ -43,7 +44,7 @@ const Destination = () => {
                     </Col>
 
                     <Col item xs={12} md={5}>
-                        Maps Here
+                        <Map></Map>
                     </Col>
                 </Row>
             </Container>
