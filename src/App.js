@@ -5,6 +5,7 @@ import Destination from "./component/Destination/Destination";
 // import Header from "./component/Header/Header";
 import Home from "./component/Home/Home";
 import Login from "./component/Login/Login";
+import SignUp from "./component/Login/SignUp";
 import NotFound from './component/NotFound/NotFound';
 import RequireAuth from "./component/RequireAuth/RequireAuth";
 
@@ -19,7 +20,7 @@ function App() {
       id: 1,
       title: "Cox's Bazar",
       description: "Why Cox's Bazar is a Great Tourist Attraction Cox's Bazar Review. Cox's Bazar is famous for its long natural sandy sea beach. ... Cox's Bazar has the world's largest unbroken sea beach which stretches more than 120 km. The entire beach is a stretch of golden sandy sea beach which is reachable by motorbike.",
-      img: "https://i.ibb.co/p1Fm5yD/coxsbazar.png"
+      img: "https://media.istockphoto.com/photos/coxs-bazar-in-its-glory-2-picture-id1262671962?k=20&m=1262671962&s=612x612&w=0&h=Vs9i3LQiTmgzLm8E5zURYoZg7Xa7BsogsW6PSESTcNY="
     }
   )
   return (
@@ -40,6 +41,7 @@ function App() {
         />
         <Route path='destination/:desId' element={<Destination />} />
         <Route path='login' element={<Login />} />
+        <Route path='signup' element={<SignUp />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </MyContext.Provider >

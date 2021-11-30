@@ -28,7 +28,7 @@ const TravelSection = () => {
                                     <div className="banner_content">
                                         <div className="row">
                                             <div className='banner_img col-sm-12 col-md-4'>
-                                                <Link to={`/booking/${place.id}`}><img src={place.img} alt="" /></Link>
+                                                <Link to={`/booking/${place.id}`}><img src={place.img} style={{ borderRadius: '10px' }} alt="" /></Link>
                                                 <div className='banner-text'>
                                                     <h2>{place.name}</h2>
                                                 </div>
@@ -39,12 +39,12 @@ const TravelSection = () => {
                             }
                         </div>
                     </div>
-                    <div className=" row align-items-center mt-5" style={{ width: '10px', margin: 'auto', }}>
+                    {/* <div className=" row align-items-center" style={{ width: '10px', margin: 'auto', }}>
                         <ButtonGroup size="md" >
                             <Button variant="light"> <FontAwesomeIcon icon={faChevronLeft} /> </Button>
                             <Button variant="light"> <FontAwesomeIcon icon={faChevronRight} /> </Button>
                         </ButtonGroup>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
