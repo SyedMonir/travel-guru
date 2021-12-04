@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Hotels = (props) => {
 
+const Hotels = (props) => {
     const { title, star, reviewed, bedroom, bed, bath, img, guest, price } = props.hotel;
 
     return (
@@ -38,7 +38,7 @@ const Hotels = (props) => {
                 <div className="hotel-review" style={{
                     display: "flex", alignItems: "center"
                 }}>
-                    {/* <StarRateOutlinedIcon style={{ color: "orange" }} /> */}
+
                     <span>
                         {star} ({reviewed})
                     </span>

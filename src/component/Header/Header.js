@@ -4,11 +4,11 @@ import './Header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-// import { MyContext } from '../../App';
+import { MyContext } from '../../App';
 
 
-const Header = (props) => {
-    // const [showArea, setShowArea] = useContext(MyContext);
+const Header = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(MyContext);
     return (
 
         <header style={{
@@ -34,7 +34,18 @@ const Header = (props) => {
                             <Link to="/destination" className="px-4 navLink">DESTINATION</Link>
                             <Link to="/blog" className="px-4 navLink">BLOG</Link>
                             <Link to="/contact" className="px-4 navLink">CONTACT</Link>
-                            <Link to="/login" className="px-4 navLink" style={{ background: '#F9A51A', borderRadius: '5px', padding: '2px' }}>LOGIN</Link>
+
+                            <Link to='/login'
+                                className="px-4 navLink"
+                                style={{ background: '#F9A51A', borderRadius: '5px', padding: '2px' }}>
+                                Login
+                            </Link>
+
+                            <h6 style={{ marginLeft: '5px', color: 'white', fontWeight: 'bolder', fontSize: '16px', textAlign: 'center' }} className="px-4 navLink">
+                                {!loggedInUser.emails ? 'User' : `${loggedInUser.displayName}`}
+                            </h6>
+
+                            {/* <h6 style={{ marginLeft: '5px', color: '#ffffff' }}>{!loggedInUser.emails ? 'User' : `${loggedInUser.name}`}</h6> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import fakeData from '../../fakeData/fakeData';
-import { faArrowRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Button, } from 'react-bootstrap';
 import './TravelSection.css';
 
 const TravelSection = () => {

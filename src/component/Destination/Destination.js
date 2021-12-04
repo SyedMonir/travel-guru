@@ -1,16 +1,15 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router';
-import { MyContext } from '../../App';
-import location, { hotelsInfo } from '../../fakeData/location';
+// import { useParams } from 'react-router';
+// import { MyContext } from '../../App';
+import { hotelsInfo } from '../../fakeData/location';
 import Header from '../Header/Header';
-import blackLogo from '../../img/Logo-black.png';
 import Hotels from '../Hotels/Hotels';
 import Map from '../Map/Map';
 
 
 const Destination = () => {
-    const { desId } = useParams();
+    // const { desId } = useParams();
 
 
     return (

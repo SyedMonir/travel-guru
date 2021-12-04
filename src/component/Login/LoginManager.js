@@ -1,7 +1,15 @@
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from './firebaseConfig';
 import { getAuth, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, updateProfile, signOut } from '@firebase/auth';
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+
+export const initializeLoginFrameWork = () => {
+    if (initializeApp.length === 0) {
+        initializeApp(firebaseConfig);
+    }
+};
+
+
 
 const auth = getAuth();
 
@@ -11,8 +19,13 @@ export const handleGoogleSignIn = () => {
     return signInWithPopup(auth, googleProvider)
         .then((result) => {
             const { displayName, email } = result.user;
-            console.log(result);
-            const signedInUser = { name: displayName, email }
+            // console.log(result);
+            const signedInUser = {
+                isSignIn: true,
+                name: displayName,
+                email: email,
+                success: true
+            }
             return signedInUser;
         }).catch((error) => {
             const errorCode = error.code;
@@ -28,6 +41,7 @@ export const createEmailAndPassword = (name, email, password) => {
         .then((res) => {
             const newUserInfo = res.user;
             newUserInfo.error = '';
+            newUserInfo.success = true;
             updateUserName(name);
             return newUserInfo;
         })
@@ -85,7 +99,8 @@ const updateUserName = name => {
     updateProfile(auth.currentUser, {
         displayName: name
     }).then(() => {
-        <p>Update Name Successfully</p>
+        // <p>Update Name Successfully</p>
+        console.log('Update Name Successfully');
     }).catch((error) => {
         console.log(error);
     });
